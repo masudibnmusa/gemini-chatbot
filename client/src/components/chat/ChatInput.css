@@ -1,0 +1,33 @@
+/* ChatInput.css */
+.chat-input {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+}
+
+.chat-input-textarea {
+  flex: 1;
+  resize: none;
+  max-height: 200px;
+  min-height: 44px;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.chat-input-textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.chat-input-textarea:disabled {
+  opacity: 0.6;
+}

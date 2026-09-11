@@ -1,0 +1,55 @@
+# ===== Dependencies =====
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# ===== Environment variables =====
+.env
+.env.local
+.env.*.local
+!.env.example
+server/.env
+!server/.env.example
+
+# ===== Build outputs =====
+dist/
+build/
+client/dist/
+client/build/
+server/dist/
+
+# ===== Logs =====
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===== Editor / OS files =====
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ===== Vite =====
+client/.vite/
+client/dist-ssr/
+*.local
+
+# ===== Testing / coverage =====
+coverage/
+*.lcov
+
+# ===== Misc =====
+.cache/
+.temp/
+.tmp/
+*.tsbuildinfo
+
+# ===== Package manager locks (optional — remove if you want to commit these) =====
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml

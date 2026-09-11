@@ -1,0 +1,10 @@
+/* MessageList.css */
+.message-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,51 @@
+/* MarkdownRenderer.css */
+.markdown-renderer {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.markdown-renderer p {
+  margin-bottom: var(--space-sm);
+}
+
+.markdown-renderer p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-renderer ul,
+.markdown-renderer ol {
+  margin: var(--space-sm) 0;
+  padding-left: var(--space-lg);
+}
+
+.markdown-renderer a {
+  color: var(--color-primary);
+}
+
+.markdown-renderer .inline-code {
+  background-color: var(--color-surface-alt);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+.markdown-renderer table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: var(--space-sm) 0;
+}
+
+.markdown-renderer th,
+.markdown-renderer td {
+  border: 1px solid var(--color-border);
+  padding: var(--space-xs) var(--space-sm);
+  text-align: left;
+}
+
+.markdown-renderer blockquote {
+  border-left: 3px solid var(--color-border);
+  padding-left: var(--space-md);
+  color: var(--color-text-secondary);
+  margin: var(--space-sm) 0;
+}
