@@ -1,7 +1,7 @@
 // store/chatStore.js
 import { create } from 'zustand'
-import { generateId } from '../../utils/formatters'
-import { MESSAGE_ROLES } from '../../utils/constants'
+import { generateId } from '../utils/formatters'
+import { MESSAGE_ROLES } from '../utils/constants'
 
 export const useChatStore = create((set, get) => ({
   messages: [],
