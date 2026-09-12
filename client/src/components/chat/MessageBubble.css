@@ -1,4 +1,3 @@
-/* MessageBubble.css */
 .message-bubble-row {
   display: flex;
   flex-direction: column;
@@ -17,21 +16,24 @@
 
 .message-bubble {
   padding: var(--space-sm) var(--space-md);
-  border-radius: var(--radius-lg);
-  line-height: 1.5;
+  line-height: 1.55;
   font-size: 0.95rem;
   word-wrap: break-word;
+  border-radius: var(--radius-lg);
 }
 
+/* One squared corner instead of full-pill rounding on every side —
+   a small structural detail that reads as designed, not templated. */
 .message-bubble.user {
   background-color: var(--color-user-bubble);
-  color: #fff;
+  color: #ffffff;
   border-bottom-right-radius: var(--radius-sm);
 }
 
 .message-bubble.assistant {
   background-color: var(--color-assistant-bubble);
   color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
   border-bottom-left-radius: var(--radius-sm);
 }
 
@@ -40,6 +42,7 @@
 }
 
 .message-timestamp {
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   color: var(--color-text-muted);
   margin-top: var(--space-xs);
