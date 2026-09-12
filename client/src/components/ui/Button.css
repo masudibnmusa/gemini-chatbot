@@ -1,4 +1,3 @@
-/* Button.css */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -7,8 +6,13 @@
   border: none;
   border-radius: var(--radius-md);
   font-size: 0.9rem;
-  font-weight: 500;
-  transition: background-color var(--transition-fast), opacity var(--transition-fast);
+  font-weight: 600;
+  transition: background-color var(--transition-fast), opacity var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.97);
 }
 
 .btn:disabled {
@@ -17,12 +21,12 @@
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
-  color: #fff;
+  background-color: var(--color-accent);
+  color: #ffffff;
 }
 
 .btn-primary:hover:not(:disabled) {
-  background-color: var(--color-primary-hover);
+  background-color: var(--color-accent-hover);
 }
 
 .btn-default {
