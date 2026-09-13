@@ -1,11 +1,15 @@
-// components/chat/ChatContainer.jsx
+// client/src/components/chat/ChatContainer.jsx
 import { useChatStore } from '../../store/chatStore'
 import MessageList from './MessageList'
 import ChatInput from './ChatInput'
 import './ChatContainer.css'
 
+const EMPTY_MESSAGES = []
+
 function ChatContainer() {
-  const messages = useChatStore((state) => state.messages)
+  const messages = useChatStore(
+    (state) => state.conversations[state.activeConversationId]?.messages ?? EMPTY_MESSAGES
+  )
 
   return (
     <div className="chat-container">
