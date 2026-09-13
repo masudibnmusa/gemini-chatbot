@@ -1,0 +1,52 @@
+/* client/src/components/sidebar/ConversationItem.css */
+.conversation-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.conversation-item:hover {
+  background-color: var(--color-surface-alt);
+}
+
+.conversation-item.is-active {
+  background-color: var(--color-accent-soft);
+}
+
+.conversation-item.is-active .conversation-title {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.conversation-title {
+  font-size: 0.875rem;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.conversation-delete {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0 4px;
+  opacity: 0;
+  transition: opacity var(--transition-fast), color var(--transition-fast);
+}
+
+.conversation-item:hover .conversation-delete {
+  opacity: 1;
+}
+
+.conversation-delete:hover {
+  color: var(--color-danger);
+}
