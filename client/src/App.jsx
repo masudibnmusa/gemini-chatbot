@@ -29,7 +29,7 @@ function App() {
             >
               ☰
             </button>
-            <span className="app-title">Gemini Chatbot</span>
+            <span className="app-title">zoto paro toto koro .. chat</span>
             <span className="app-badge">3.5 Flash</span>
           </div>
           <ThemeToggle theme={theme} onToggle={toggleTheme} />
