@@ -1,10 +1,22 @@
+/* client/src/App.css */
 .app {
   display: flex;
-  flex-direction: column;
   height: 100vh;
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
 }
 
 .app-header {
@@ -19,6 +31,15 @@
   display: flex;
   align-items: baseline;
   gap: var(--space-sm);
+}
+
+.sidebar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--color-text-primary);
+  margin-right: var(--space-xs);
 }
 
 .app-title {
@@ -44,4 +65,35 @@
   flex-direction: column;
   min-height: 0;
   overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: inline-flex;
+  }
+
+  .sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform var(--transition-base);
+    z-index: 20;
+  }
+
+  .sidebar-wrapper.is-open {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+  }
 }
